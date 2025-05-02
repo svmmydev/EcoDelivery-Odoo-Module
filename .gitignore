@@ -1,0 +1,32 @@
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Logs y bases de datos de prueba
+*.log
+*.db
+*.sqlite
+
+# Archivos del sistema / IDEs
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime*
+
+# Backups
+*.zip
+*.bak
+*.tmp
+*.swp
+
+# Entornos virtuales (si los usas localmente)
+venv/
+.env/
+
+# Archivos de compilación
+*.egg-info/
+dist/
+build/
