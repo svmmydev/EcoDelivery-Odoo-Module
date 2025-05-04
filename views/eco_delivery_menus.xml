@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <!-- Menú raíz -->
+        <menuitem id="eco_delivery_menu" name="EcoDelivery"/>
+
+        <!-- Menú hijo: Transportes -->
+        <menuitem id="transportes_menu"
+                  name="Transportes"
+                  parent="eco_delivery_menu"
+                  action="accion_transporte"/>
+
+        <!-- Menú hijo: Envíos -->
+        <menuitem id="envios_menu"
+                  name="Envíos"
+                  parent="eco_delivery_menu"
+                  action="accion_envios"/>
+    </data>
+</odoo>
