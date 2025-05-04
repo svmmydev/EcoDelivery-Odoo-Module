@@ -15,7 +15,10 @@ class TransporteEco(models.Model):
         required=True,
         help='Elige el tipo de transporte deseado.')
     descripcion = fields.Char('Descripción', required=True)
-    envios = fields.One2many(comodel_name='envioeco.envioeco', inverse_name='tipo_transporte', string='Envíos en el transporte')
+    envios = fields.One2many(
+        comodel_name='envioeco.envioeco',
+        inverse_name='tipo_transporte',
+        string='Envíos en el transporte')
 
     _sql_constraints = [
         ('name_uniq', 'unique (transporte)', '¡Transporte ya existente!' ),
