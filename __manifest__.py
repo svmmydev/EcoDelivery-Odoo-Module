@@ -27,6 +27,9 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/transporte_views.xml',
+        'views/envios_views.xml',
+        'views/eco_delivery_menus.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

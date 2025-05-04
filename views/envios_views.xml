@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <!-- VISTA TREE -->
+        <record id = 'envios_tree_view' model = 'ir.ui.view'>
+            <field name = 'name'>Árbol de Envíos</field>
+            <field name = 'model'>envioeco.envioeco</field>
+            <field name = 'arch' type = 'xml'>
+                <tree string = 'Envíos'>
+                    <field name = 'pedido'/>
+                    <field name = 'direccion_entrega'/>
+                    <field name = 'fecha_solicitud'/>
+                    <field name = 'tipo_transporte'/>
+                    <field name = 'fecha_entrega_prevista'/>
+                    <field name = 'estado'/>
+                    <field name = 'fecha_entrega'/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- VISTA FORM -->
+        <record id = 'transporte_form_view' model = 'ir.ui.view'>
+            <field name = 'name'>Formulario del transporte</field>
+            <field name = 'model'>envioeco.envioeco</field>
+            <field name = 'arch' type = 'xml'>
+                <form string = 'Envíos'>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name = 'pedido'/>
+                                <field name = 'direccion_entrega'/>
+                                <field name = 'tipo_transporte'/>
+                            </group>
+                            <group>
+                                <field name = 'fecha_solicitud'/>
+                                <field name = 'fecha_entrega_prevista'/>
+                                <field name = 'fecha_entrega'/>
+                                <field name = 'estado'/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ACCIÓN MENÚ -->
+        <record id = 'accion_envios' model = 'ir.actions.act_window'>
+            <field name = 'name'>Envíos</field>
+            <field name = 'res_model'>envioeco.envioeco</field>
+            <field name = 'view_mode'>tree,form</field>
+        </record>
+    </data>
+</odoo>

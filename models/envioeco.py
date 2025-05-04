@@ -3,6 +3,7 @@ from odoo import fields, models, api
 from odoo.exceptions import ValidationError
 
 
+# MODELO TRANSPORTE ECO
 class EnvioEco(models.Model):
     _name = 'envioeco.envioeco'
     _description = 'envioeco'
