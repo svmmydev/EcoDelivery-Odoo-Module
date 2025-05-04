@@ -12,7 +12,7 @@ class TransporteEco(models.Model):
         ('patinete', 'Patinete'),
         ('furgoneta_elec', 'Furgoneta Eléctrica')
     ], string=' Tipo de transporte',
-        default='Bicicleta',
+        default='bicicleta',
         required=True,
         help='Elige el tipo de transporte deseado.')
     descripcion = fields.Text(' Descripción', required=True)

@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_eco_delivery_eco_delivery,eco_delivery.eco_delivery,model_eco_delivery_eco_delivery,,1,0,0,0
+acces_transporte_gestor,transporteeco.transporteeco,model_transporteeco_transporteeco,gestor_envios,1,1,1,1
+acces_transporte_consultor,transporteeco.transporteeco,model_transporteeco_transporteeco,consultor_envios,1,0,0,0
+acces_envios_gestor,envioeco.envioeco,model_envioeco_envioeco,gestor_envios,1,1,1,1
+acces_envios_consultor,envioeco.envioeco,model_envioeco_envioeco,consultor_envios,1,0,0,0
