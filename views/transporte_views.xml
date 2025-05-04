@@ -7,7 +7,8 @@
             <field name = 'arch' type = 'xml'>
                 <tree string = 'Transporte'>
                     <field name = 'transporte'/>
-                    <field name = 'envios'/>
+                    <field name = 'estado_transporte'/>
+                    <field name = 'envios_resumen'/>
                 </tree>
             </field>
         </record>
@@ -17,15 +18,22 @@
             <field name = 'name'>Formulario del transporte</field>
             <field name = 'model'>transporteeco.transporteeco</field>
             <field name = 'arch' type = 'xml'>
-                <form string = 'Transporte'>
+                <form string="Transporte">
                     <sheet>
+                        <div class="text-center" style="margin-bottom: 30px;">
+                            <h2>Transportes</h2>
+                        </div>
                         <group>
-                            <field name = 'transporte'/>
-                            <field name = 'descripcion'/>
-                            <field name = 'envios'/>
+                            <field name="transporte" class="mb9" style="max-width: 400px; margin-bottom: 20px;"/>
+                            <field name="estado_transporte" class="mb9" style="margin-bottom: 20px; max-width: 400px;"/>
+                            <field name="descripcion" class="mb9" style="margin-bottom: 20px; white-space: normal; word-break: break-word; max-width: 800px;"/>
+                        </group>
+                        <group>
+                            <field name="envios" context="{'default_from_transporte': True}"/>
                         </group>
                     </sheet>
                 </form>
+            
             </field>
         </record>
 

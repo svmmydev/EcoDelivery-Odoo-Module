@@ -7,36 +7,42 @@
             <field name = 'arch' type = 'xml'>
                 <tree string = 'Envíos'>
                     <field name = 'pedido'/>
+                    <field name = 'estado'/>
+                    <field name = 'tipo_transporte'/>
                     <field name = 'direccion_entrega'/>
                     <field name = 'fecha_solicitud'/>
-                    <field name = 'tipo_transporte'/>
                     <field name = 'fecha_entrega_prevista'/>
-                    <field name = 'estado'/>
                     <field name = 'fecha_entrega'/>
                 </tree>
             </field>
         </record>
 
         <!-- VISTA FORM -->
-        <record id = 'transporte_form_view' model = 'ir.ui.view'>
-            <field name = 'name'>Formulario del transporte</field>
+        <record id = 'envios_form_view' model = 'ir.ui.view'>
+            <field name = 'name'>Formulario del envío</field>
             <field name = 'model'>envioeco.envioeco</field>
             <field name = 'arch' type = 'xml'>
-                <form string = 'Envíos'>
+                <form string="Envios">
                     <sheet>
-                        <group>
+                        <div class="text-center" style="margin-bottom: 40px;">
+                            <h2>Envíos</h2>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
                             <group>
-                                <field name = 'pedido'/>
-                                <field name = 'direccion_entrega'/>
-                                <field name = 'tipo_transporte'/>
+                                <field name="pedido" style="margin-bottom: 10px;"/>
+                                <field name="direccion_entrega" style="margin-bottom: 10px;"/>
+                                <field name="tipo_transporte" attrs="{'invisible': [('from_transporte', '=', True)]}" style="margin-bottom: 10px;"/>
+                                <field name="estado" style="margin-bottom: 10px;"/>
                             </group>
                             <group>
-                                <field name = 'fecha_solicitud'/>
-                                <field name = 'fecha_entrega_prevista'/>
-                                <field name = 'fecha_entrega'/>
-                                <field name = 'estado'/>
+                                <field name="fecha_solicitud" style="margin-bottom: 10px;"/>
+                                <field name="fecha_entrega_prevista" style="margin-bottom: 10px;"/>
+                                <field name="fecha_entrega" style="margin-bottom: 10px;"/>
                             </group>
-                        </group>
+                        </div>
+
+                        <field name="from_transporte" invisible="1"/>
                     </sheet>
                 </form>
             </field>
