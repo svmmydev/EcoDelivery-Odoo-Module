@@ -1,5 +1,6 @@
 <odoo>
     <data>
+        <!-- VISTA TREE -->
         <record id = 'transporte_tree_view' model = 'ir.ui.view'>
             <field name = 'name'>Árbol de Transportes</field>
             <field name = 'model'>transporteeco.transporteeco</field>
@@ -10,6 +11,8 @@
                 </tree>
             </field>
         </record>
+
+        <!-- VISTA FORM -->
         <record id = 'transporte_form_view' model = 'ir.ui.view'>
             <field name = 'name'>Formulario del transporte</field>
             <field name = 'model'>transporteeco.transporteeco</field>
@@ -25,5 +28,22 @@
                 </form>
             </field>
         </record>
+
+        <!-- ACCIÓN MENÚ -->
+        <record id = 'accion_transporte' model = 'ir.actions.act_window'>
+            <field name = 'name'>Transportes</field>
+            <field name = 'res_model'>transporteeco.transporteeco</field>
+            <field name = 'view_type'>form</field>
+            <field name = 'view_mode'>tree,form</field>
+        </record>
+
+        <!-- MENÚ PADRE -->
+        <menuitem id = 'transporte_menu' name = 'Transportes'/>
+
+        <!-- MENÚ HIJO -->
+        <menuitem id = 'transporte_transporte_menu'
+                parent = 'transporte_menu'
+                name = 'Transportes'
+                action = 'accion_transporte'/>
     </data>
 </odoo>

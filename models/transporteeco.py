@@ -2,6 +2,7 @@
 from odoo import fields, models
 
 
+# MODELO TRANSPORTE ECO
 class TransporteEco(models.Model):
     _name = 'transporteeco.transporteeco'
     _description = 'transporteeco'
