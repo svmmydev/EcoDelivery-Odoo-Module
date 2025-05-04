@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <record id = 'transporte_tree_view' model = 'ir.ui.view'>
+            <field name = 'name'>Árbol de Transportes</field>
+            <field name = 'model'>transporteeco.transporteeco</field>
+            <field name = 'arch' type = 'xml'>
+                <tree string = 'Transporte'>
+                    <field name = 'transporte'/>
+                    <field name = 'envios'/>
+                </tree>
+            </field>
+        </record>
+        <record id = 'transporte_form_view' model = 'ir.ui.view'>
+            <field name = 'name'>Formulario del transporte</field>
+            <field name = 'model'>transporteeco.transporteeco</field>
+            <field name = 'arch' type = 'xml'>
+                <form string = 'Transporte'>
+                    <sheet>
+                        <group>
+                            <field name = 'transporte'/>
+                            <field name = 'descripcion'/>
+                            <field name = 'envios'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
